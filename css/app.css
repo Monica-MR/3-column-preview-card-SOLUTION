@@ -1,0 +1,106 @@
+:root{
+    --orange: hsl(31, 77%, 52%);
+    --cyan: hsl(184, 100%, 22%); 
+    --darkCyan: hsl(179, 100%, 13%);
+    --transparentWhite: hsla(0, 0%, 100%, 0.75); /*(paragraphs)*/
+    --gray: hsl(0, 0%, 95%); /*(background, headings, buttons)*/
+
+    --fuenteSecundaria:'Big Shoulders Display', cursive;
+    --fuentePrincipal: 'Lexend Deca', sans-serif;
+}
+html{
+    box-sizing: border-box;
+    font-size: 62.5%; /*1rem = 10px*/
+}
+*,
+*:after,
+*:before{
+    box-sizing: inherit;
+}
+body{
+    font-size: 1.5rem;
+    font-family: var(--fuentePrincipal);
+    background-color: var(--gray);
+}
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+/*CARDS*/
+.cards{
+    max-width: 90%;
+    margin: 8rem auto 6rem auto;
+}
+@media (min-width: 1100px ){
+    .cards{
+        max-width: 70%;
+        display: flex;
+        align-items: center;
+        margin-top: 20%;
+        margin-bottom: 1rem;
+    }
+}
+
+.card{
+    padding: 5rem 4rem;
+    color: var(--transparentWhite);
+}
+.card__title{
+    text-transform: uppercase;
+    font-family: var(--fuenteSecundaria);
+    font-size: 3.5rem;
+    padding-top: 1.5rem;
+}
+.card__info{
+    line-height: 2;
+}
+.card__btn{
+    margin-top: 8rem;
+    border-radius: 3rem;
+    background-color: var(--transparentWhite);
+    display: inline-block;
+    padding: 1.5rem 4.5rem;
+    border: 2px solid transparent;
+}
+.card__btn:hover{
+    cursor: pointer;
+    background-color: unset;
+    color: var(--transparentWhite);
+    border: 2px solid var(--transparentWhite);
+}
+
+.sedan{
+    background-color: var(--orange); 
+    border-radius: .8rem .8rem 0 0;
+}
+@media (min-width: 1100px ){
+    .sedan{
+        border-radius: .8rem 0 0 .8rem;
+    }   
+}
+.sedan__btn{
+    color: var(--orange);    
+}
+
+.suvs{
+    background-color: var(--cyan); 
+}
+.suvs__btn{
+    color: var(--cyan);
+}
+
+.luxury{
+    background-color: var(--darkCyan);
+    border-radius: 0 0 .8rem .8rem;
+}
+@media (min-width: 1100px ){
+    .luxury{
+        border-radius: 0 .8rem .8rem 0;
+    }   
+}
+.luxury__btn{
+    color: var(--darkCyan);
+}
